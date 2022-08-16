@@ -5,7 +5,7 @@ import Header from './components/Header';
 function App() {
   return (
    <>
-   <Header />
+   <Header  text="Hello world"/>
     <div className="App">
     <h1>Vladan Cupric</h1>
     
