@@ -6,7 +6,7 @@ import FeedbackItem from './components/FeedbackItem';
 function App() {
   return (
    <>
-   <Header  bgColor= "red" text="Hello world" textColor="white"/>
+   <Header />
     <FeedbackItem />
     </>
   );
