@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import {useState} from 'react';
 
 function FeedbackItem() {
+
+    const [rating, setRating] = useState(7)
   return (
     <div className='card'>
         <div className="num-display">10</div>
