@@ -22,9 +22,9 @@ function App() {
     <div className="container">
       <FeedbackStats feedback ={feedback} />
     <FeedbackList feedback= {feedback}  handleDelete={deleteFeedback}/>
-    <Card>
+    {/* <Card>
       Hello World
-    </Card>
+    </Card> */}
     </div>
     </>
   );
