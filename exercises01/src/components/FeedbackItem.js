@@ -1,7 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import Card from './shared/Card';
-import {} from 'react-icons/fa'
+import {FaTimes} from 'react-icons/fa';
 
 function FeedbackItem({item}) {
 
@@ -17,6 +17,9 @@ function FeedbackItem({item}) {
     return (
     <Card >
         <div className="num-display" >{item.rating}</div>
+        <button onAuxClick={()=>console.log(123)} className='close'>
+          <FaTimes color="purple" />
+        </button>
         <div className="text-display">{item.text}</div>
         {/* <button onClick={handleClick}>Click</button> */}
     </Card>
