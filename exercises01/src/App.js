@@ -5,6 +5,7 @@ import FeedbackItem from './components/FeedbackItem';
 import FeedbackData from "./data/FeedbackData";
 import FeedbackList from "./components/FeedbackList";
 import Card from "./components/shared/Card";
+import FeedbackStats from "./components/FeedbackStats";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
    <>
    <Header />
     <div className="container">
+      <FeedbackStats feedback ={feedback} />
     <FeedbackList feedback= {feedback}  handleDelete={deleteFeedback}/>
     <Card>
       Hello World
