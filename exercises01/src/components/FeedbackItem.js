@@ -20,7 +20,7 @@ function FeedbackItem({item}) {
     return (
     <Card >
         <div className="num-display" >{item.rating}</div>
-        <button onClick={()=>handleClick()} className='close'>
+        <button onClick={()=>handleClick(item.id)} className='close'>
           <FaTimes color="purple" />
         </button>
         <div className="text-display">{item.text}</div>
