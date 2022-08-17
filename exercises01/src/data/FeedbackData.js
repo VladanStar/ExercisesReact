@@ -14,7 +14,7 @@ const FeedbackData = [
       },
       {
         id:3,
-        rating:0,
+        rating:9,
         text:"Alert is only used on the route moving to that route we can prevent "
       },
       {
