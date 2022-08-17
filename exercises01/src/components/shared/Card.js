@@ -6,4 +6,4 @@ function Card({children,reverse}) {
   )
 }
 
-export default Card
+export default Card;
