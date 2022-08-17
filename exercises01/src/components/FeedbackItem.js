@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from 'react';
 import Card from './shared/Card';
+import {} from 'react-icons/fa'
 
 function FeedbackItem({item}) {
 
