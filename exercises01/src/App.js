@@ -11,9 +11,9 @@ function App() {
   return (
    <>
    <Header />
-
+    <div className="container">
     <FeedbackList feedback= {feedback} />
-   
+    </div>
     </>
   );
 }
