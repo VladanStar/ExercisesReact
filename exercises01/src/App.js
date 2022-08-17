@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import FeedbackItem from './components/FeedbackItem';
 import FeedbackData from "./data/FeedbackData";
+import FeedbackList from "./components/FeedbackList";
 
 function App() {
 
@@ -11,7 +12,8 @@ function App() {
    <>
    <Header />
 
-    <FeedbackItem />
+    <FeedbackList feedback= {feedback} />
+   
     </>
   );
 }
