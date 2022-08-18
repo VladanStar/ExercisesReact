@@ -6,6 +6,7 @@ function FeedbackForm() {
   const [text, setText] = useState("");
   const handleTextChange = (e) => {
     console.log(e.target.value);
+    setText(e.target.value);
   };
   return (
     <Card>
