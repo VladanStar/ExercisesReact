@@ -23,9 +23,20 @@ function FeedbackForm() {
     console.log(e.target.value);
     setText(e.target.value);
   };
+
+  const handleSubmit =()=>{
+    e.preventDefault();
+    if(text.trim()> 10){
+      const newFeedback = {
+      text,
+      rating,
+    }
+    console.log(newFeedback)
+  }
+}
   return (
     <Card>
-      <form>
+      <form onSubmit= {handlesubmit}>
         <h2>How would you rate your service with us?</h2>
         <RatingSelect select={() => setRating(rating)} />
         <div className="input-group">
