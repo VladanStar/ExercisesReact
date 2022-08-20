@@ -16,12 +16,15 @@ function App() {
     if(window.confirm("Are you sure you want to delete")){
     setFeedback(feedback.filter((item) =>item.id !== id))
   
-  }}
+  }};
+  const addFeedback = (newFeedback) => {
+    console.log(newFeedback)
+  }
   return (
    <>
    <Header />
     <div className="container">
-      <FeedbackForm />
+      <FeedbackForm  handleAdd= {addFeedback}/>
       <FeedbackStats feedback ={feedback} />
     <FeedbackList feedback= {feedback}  handleDelete={deleteFeedback}/>
     {/* <Card>
