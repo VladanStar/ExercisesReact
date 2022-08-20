@@ -12,16 +12,13 @@ function FeedbackForm() {
   const handleTextChange = (e) => {
     if (text === "") {
       setBtnDisabled(true);
-      setMessage(null)
-
-    }
-    else if (text !== "" && text.trim().length <= 10) {
-      setBtnDisabled(true);
-      setMessage("Text must be at least 10 carachters")
-    }
-    else {
       setMessage(null);
-      setBtnDisabled(false)
+    } else if (text !== "" && text.trim().length <= 10) {
+      setBtnDisabled(true);
+      setMessage("Text must be at least 10 carachters");
+    } else {
+      setMessage(null);
+      setBtnDisabled(false);
     }
     console.log(e.target.value);
     setText(e.target.value);
@@ -30,7 +27,7 @@ function FeedbackForm() {
     <Card>
       <form>
         <h2>How would you rate your service with us?</h2>
-        <RatingSelect  select={()=>console.log(rating)}/>
+        <RatingSelect select={() => setRating(rating)} />
         <div className="input-group">
           <input
             onChange={handleTextChange}
@@ -38,9 +35,11 @@ function FeedbackForm() {
             placeholder="Write a review"
             value={text}
           />
-        <Button type='submit' version="primary" isDisabled={btnDisabled}>SEND</Button>
+          <Button type="submit" version="primary" isDisabled={btnDisabled}>
+            SEND
+          </Button>
         </div>
-        {message && <div className="message">{ message}</div>}
+        {message && <div className="message">{message}</div>}
       </form>
     </Card>
   );
