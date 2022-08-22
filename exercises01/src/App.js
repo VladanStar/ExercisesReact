@@ -28,26 +28,28 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <React.Fragment className="container">
-          <Route exact path="/">
-            <Route path="" elemen={<FeedbackForm handleAdd={addFeedback} />} />
-            <Route path="" elemen={<FeedbackStats feedback={feedback} />} />
-            <Route
-              path=""
-              elemen={
+      <div className="container">
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <FeedbackForm handleAdd={addFeedback} />
+                <FeedbackStats feedback={feedback} />
                 <FeedbackList
                   feedback={feedback}
                   handleDelete={deleteFeedback}
                 />
-              }
-            />
+              </>
+            }
+          />
+
+          <Route path="/about" component={AboutPage}>
+            This is the about route
           </Route>
-        </React.Fragment>
-        <Route path="/about" component={AboutPage}>
-          This is the about route
-        </Route>
-      </Routes>
+        </Routes>
+      </div>
     </Router>
   );
 }
