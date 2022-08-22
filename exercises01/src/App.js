@@ -46,7 +46,7 @@ function App() {
             }
           />
 
-          <Route path="/about" component={AboutPage}>
+          <Route path="/about" element={<AboutPage />}>
             This is the about route
           </Route>
         </Routes>
