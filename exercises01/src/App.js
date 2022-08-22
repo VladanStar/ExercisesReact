@@ -11,6 +11,7 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutPage from "./components/pages/AboutPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AboutIconLink from "./components/AboutIconLink";
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -49,6 +50,7 @@ function App() {
             This is the about route
           </Route>
         </Routes>
+        <AboutIconLink />
       </div>
     </Router>
   );
