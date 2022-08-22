@@ -30,17 +30,19 @@ function App() {
    <Router>
    <Header />
    <Routes>
-    <Route>
+  
     <React.Fragment className="container">
+    <Route exact path="/">
       <FeedbackForm  handleAdd= {addFeedback}/>
       <FeedbackStats feedback ={feedback} />
     <FeedbackList feedback= {feedback}  handleDelete={deleteFeedback}/>
-    </React.Fragment>
+   
     {/* <Card>
       Hello World
     </Card> */}
     {/* <AboutPage /> */}
     </Route>
+    </React.Fragment>
     <Route path='/about' component = {AboutPage}>This is the about route</Route>
     </Routes>
     
