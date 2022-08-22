@@ -8,7 +8,7 @@ import FeedbackList from "./components/FeedbackList";
 import Card from "./components/shared/Card";
 import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
-
+import AboutPage from "./data/AboutPage";
 function App() {
 
   const[feedback, setFeedback] = useState(FeedbackData);
@@ -33,6 +33,7 @@ function App() {
     {/* <Card>
       Hello World
     </Card> */}
+    <AboutPage />
     </div>
     </>
   );
