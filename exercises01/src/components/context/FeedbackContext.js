@@ -53,6 +53,11 @@ export const FeedbackProvider = ({ children }) => {
     console.log(newFeedback);
     setFeedback([newFeedback, ...feedback]);
   };
+  //Update feedback
+  const updateFeedback = (id, updItem)=>{
+    console.log(id);
+
+  }
 
   return (
     <FeedbackContext.Provider
@@ -62,6 +67,7 @@ export const FeedbackProvider = ({ children }) => {
         addFeedback,
         editFeedback,
         feedbackEdit,
+        updateFeedback,
       }}
     >
       {children}
