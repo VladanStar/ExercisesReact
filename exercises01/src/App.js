@@ -13,8 +13,11 @@ import AboutPage from "./components/pages/AboutPage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AboutIconLink from "./components/AboutIconLink";
 import { FeedbackProvider } from "./components/context/FeedbackContext";
+
+
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
+  
   const deleteFeedback = (id) => {
     console.log("App", id);
     if (window.confirm("Are you sure you want to delete")) {
