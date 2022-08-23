@@ -17,11 +17,19 @@ export const FeedbackProvider = ({ children }) => {
       setFeedback(feedback.filter((item) => item.id !== id));
     }
   };
+
+  const addFeedback = (newFeedback) => {
+    // newFeedback.id = uuidv4()
+    console.log(newFeedback);
+    setFeedback([newFeedback, ...feedback]);
+  };
+
   return (
     <FeedbackContext.Provider
       value={{
         feedback,
         deleteFeedback,
+        addFeedback,
       }}
     >
       {children}
