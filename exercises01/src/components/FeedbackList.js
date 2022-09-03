@@ -9,7 +9,7 @@ function FeedbackList() {
   // const {handleDelete} = useContext(FeedbackContext);
   console.log(feedback);
   if (!isLoading && (!feedback || feedback.lenth === 0)) {
-    return<Spinner />
+    return <Spinner />
   }
   return isLoading ? (
     <h3>Loading...</h3>
